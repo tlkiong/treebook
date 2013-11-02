@@ -1,3 +1,4 @@
+
 require 'test_helper'
 
 class CustomRoutesTest < ActionDispatch::IntegrationTest
@@ -20,4 +21,8 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
   	assert_response :success
   end
 
+  test "that a profile page works" do
+    get '/jim'
+    assert_response :success
+  end
 end
